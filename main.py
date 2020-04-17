@@ -21,7 +21,7 @@ class URAI:
         WebDriverWait(driver, time).until(element_present)
 
     def send_whatsapp_msg(self, chatbot, phone_number):
-        driver = webdriver.Chrome(executable_path=os.path.abspath(os.getcwd()) + "chromedriver")
+        driver = webdriver.Chrome(executable_path=os.path.abspath(os.getcwd()) + "/chromedriver")
         driver.get("https://web.whatsapp.com/")
         sleep(5)
         driver.get("https://web.whatsapp.com/send?phone={}&source=&data=#".format(phone_number))
